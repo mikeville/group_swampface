@@ -19,7 +19,6 @@ class MissionsController < ApplicationController
 
   def update
     # Matt
-
   end
 
   def edit
