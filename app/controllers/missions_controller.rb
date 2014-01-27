@@ -3,10 +3,11 @@ class MissionsController < ApplicationController
   end
 
   def new
-    # Ethan
+    @mission = Mission.new
   end
 
   def create
+    @mission = Mission.create(params[:mission])
     # Ethan
   end
 
@@ -14,6 +15,8 @@ class MissionsController < ApplicationController
   end
 
   def destroy
+    Mission.delete(params[:id])
+    redirect_to '/'
     # Brendan
   end
 

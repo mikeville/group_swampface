@@ -1,38 +1,20 @@
-<h1>Nasa Mission Log</h1>
+<h1>New Mission</h1>
 
+<%= form_for @mission do |f| %>
+  
+  <%= f.label :title %>
+  <%= f.text_field :title %> </br>
 
-<h3>Add Mission</h3>
-<form action="<%= missions_path %>" method="post">
+  <%= f.label :target %>
+  <%= f.text_field :target %> </br>
 
-  <input id="new_title_input" type="text" name="new_title" />
-  <input id="new_target_input" type="text" name="new_target" />
-  <input id="new_launch_date_input" type="text" name="new_launch_date" />
-  <input id="new_vehicle_name_intput" type="text" name="new_vehicle_name" />
+  <%= f.label :launch_date %>
+  <%= select_month(Date.today, {}, name: 'launch[month') %>
+  <%= select_day(Date.today, {}, name: 'launch[day') %>
+  <%= select_year(Date.today, {}, name: 'launch[year') %> </br>
 
-
-  <button>New Mission</button>
-
-</form>
-
-
-
-<h3>Mission</h3>
-<table border="1">
-  <tr>
-  <th>Mission</th>
-  <th>Target</th>
-  <th>Vehicle</th>
-  <th>Launch Date</th>
-</tr>
-<% @missions.each do |mission| %>
-<tr>
-  <th><%= mission.title %></th>
-  <th><%= mission.target %></th>
-  <th><%= mission.vehicle %></th>
-  <th><%= mission.launch_date %></th>
-</tr>
-</table>
-
-
-
-
+  <%= f.label :vehicle_name %>
+  <%= f.text_field :vehicle_name %> </br>
+  
+  <%= f.submit :submit %>
+<% end %>
