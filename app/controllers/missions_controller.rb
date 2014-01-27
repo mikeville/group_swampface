@@ -12,6 +12,8 @@ class MissionsController < ApplicationController
   end
 
   def destroy
+    Mission.delete(params[:id])
+    redirect_to '/'
   end
 
   def update
