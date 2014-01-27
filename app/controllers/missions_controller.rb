@@ -3,18 +3,25 @@ class MissionsController < ApplicationController
   end
 
   def new
+    @mission = Mission.new
   end
 
   def create
+    @mission = Mission.create(params[:mission])
+    # Ethan
   end
 
   def show
   end
 
   def destroy
+    Mission.delete(params[:id])
+    redirect_to '/'
+    # Brendan
   end
 
   def update
+<<<<<<< HEAD
     id = params[:id]
     @update_m = Mission.find(id)
     @update_m.title = params[:new_title]
@@ -29,6 +36,13 @@ class MissionsController < ApplicationController
     id = params[:id]
     @mission = Mission.find(id)
     redirect_to :back
+=======
+    # Matt
+  end
+
+  def edit
+    # Matt
+>>>>>>> 48f37adda4ad9b19216c86ff98959f468f549adf
   end
 
  end
