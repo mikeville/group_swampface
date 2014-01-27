@@ -1,7 +1,7 @@
 
 
-<form action='/missions/<%= mission.id %>' method='post'>
-<input type="hidden" name="mission_id" value="<%= mission.id %>" />
+<form action='/missions/<%= @mission.id %>' method='post'>
+<input type="hidden" name="mission_id" value="<%= @mission.id %>" />
 <input name="_method" type="hidden" value="delete" />
 <input type="submit" value="delete" />
 </form>
