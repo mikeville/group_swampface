@@ -3,9 +3,11 @@ class MissionsController < ApplicationController
   end
 
   def new
+    @mission = Mission.new
   end
 
   def create
+    @mission = Mission.create(params[:mission])
   end
 
   def show
