@@ -9,7 +9,9 @@
   <%= f.text_field :target %> </br>
 
   <%= f.label :launch_date %>
-  <%= f.datetime_select :launch_date %> </br>
+  <%= select_month(Date.today, {}, name: 'launch[month') %>
+  <%= select_day(Date.today, {}, name: 'launch[day') %>
+  <%= select_year(Date.today, {}, name: 'launch[year') %> </br>
 
   <%= f.label :vehicle_name %>
   <%= f.text_field :vehicle_name %> </br>
