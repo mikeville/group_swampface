@@ -1,0 +1,38 @@
+<h1>Nasa Mission Log</h1>
+
+
+<h3>Add Mission</h3>
+<form action="<%= missions_path %>" method="post">
+
+  <input id="new_title_input" type="text" name="new_title" />
+  <input id="new_target_input" type="text" name="new_target" />
+  <input id="new_launch_date_input" type="text" name="new_launch_date" />
+  <input id="new_vehicle_name_intput" type="text" name="new_vehicle_name" />
+
+
+  <button>New Mission</button>
+
+</form>
+
+
+
+<h3>Mission</h3>
+<table border="1">
+  <tr>
+  <th>Mission</th>
+  <th>Target</th>
+  <th>Vehicle</th>
+  <th>Launch Date</th>
+</tr>
+<% @missions.each do |mission| %>
+<tr>
+  <th><%= mission.title %></th>
+  <th><%= mission.target %></th>
+  <th><%= mission.vehicle %></th>
+  <th><%= mission.launch_date %></th>
+</tr>
+</table>
+
+
+
+
