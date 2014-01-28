@@ -8,13 +8,11 @@
   <th>Vehicle</th>
   <th>Launch Date</th>
 </tr>
-<% @missions.each do |mission| %>
 <tr>
-  <th><%= mission.title %></th>
-  <th><%= mission.target %></th>
-  <th><%= mission.vehicle %></th>
-  <th><%= mission.launch_date %></th>
-<% end %>
+  <th><%= @mission.title %></th>
+  <th><%= @mission.target %></th>
+  <th><%= @mission.vehicle_name %></th>
+  <th><%= @mission.launch_date %></th>
 </tr>
 </table>
 
