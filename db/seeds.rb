@@ -5,3 +5,21 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+Mission.delete_all
+
+title_array = ["shuttle", "probe", "rocket", "destroyer", "deathstar"]
+vehicle_array = ["apollo1", "apollo2", "apollo3", "apollo4", "apollo5"]
+
+
+10.times do 
+  title = title_array.sample
+  vehicle = vehicle_array.sample
+  Mission.create(title: title, vehicle_name: vehicle)
+end
+
+
+
+

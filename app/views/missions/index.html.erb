@@ -1,7 +1,27 @@
+<h1 class='header'>Nasa Mission Log</h1>
 
+<<<<<<< HEAD
+<!-- MIKE'S FIXES~~~~~~~~~~~~~~~~~~ -->
+<table border="1">
+=======
+<img src="http://upload.wikimedia.org/wikipedia/commons/2/25/Nasa-logo.gif" width="200" />
 
-<form action='/missions/<%= @mission.id %>' method='post'>
-<input type="hidden" name="mission_id" value="<%= @mission.id %>" />
-<input name="_method" type="hidden" value="delete" />
-<input type="submit" value="delete" />
-</form>
+<table>
+>>>>>>> 7e257a4448ed9e68a243f6548e7c69b0c604de74
+  <tr>
+  <th>Mission</th>
+  <th>Target</th>
+  <th>Vehicle</th>
+  <th>Launch Date</th>
+</tr>
+<% @missions.each do |mission| %>
+<tr>
+  <td><a href="missions/<%= mission.id %>"><%= mission.title %></a></td>
+  <td><%= mission.target %></td>
+  <td><%= mission.vehicle_name %></td>
+  <td><%= mission.launch_date %></td>
+</tr>
+<% end %>
+</table>
+<!-- MIKE'S FIXES~~~~~~~~~~~~~~~~~~ -->
+
