@@ -9,7 +9,7 @@ class MissionsController < ApplicationController
 
   def create
     @mission = Mission.create(params[:mission])
-    redirect_to root_path
+    redirect_to '/'
   end
 
   def show
@@ -18,18 +18,18 @@ class MissionsController < ApplicationController
 
   def destroy
     Mission.delete(params[:id])
-    redirect_to root_path
+    redirect_to '/'
   end
 
   def update
     @mission = Mission.find(params[:id])
     @mission.update_attributes(params[:mission])
-    redirect_to root_path
+    redirect_to '/'
   end
 
   def edit
     @mission = Mission.find(params[:id])
-    redirect_to root_path
+    redirect_to '/'
   end
 
   def edit
