@@ -1,6 +1,6 @@
 <h1>Nasa Mission Log</h1>
 
-
+<!-- MIKE'S FIXES~~~~~~~~~~~~~~~~~~ -->
 <table border="1">
   <tr>
   <th>Mission</th>
@@ -10,10 +10,12 @@
 </tr>
 <% @missions.each do |mission| %>
 <tr>
-  <th><a href="mission/<%= mission.id %>"><%= mission.title %></a></th>
-  <th><%= mission.target %></th>
-  <th><%= mission.vehicle %></th>
-  <th><%= mission.launch_date %></th>
+  <td><a href="missions/<%= mission.id %>"><%= mission.title %></a></td>
+  <td><%= mission.target %></td>
+  <td><%= mission.vehicle_name %></td>
+  <td><%= mission.launch_date %></td>
 </tr>
-</table>
 <% end %>
+</table>
+<!-- MIKE'S FIXES~~~~~~~~~~~~~~~~~~ -->
+
