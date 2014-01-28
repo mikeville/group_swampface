@@ -10,14 +10,16 @@
 
 Mission.delete_all
 
-title_array = ["shuttle", "probe", "rocket", "destroyer", "deathstar"]
-vehicle_array = ["apollo1", "apollo2", "apollo3", "apollo4", "apollo5"]
+vehicle_array = ["shuttle", "probe", "rocket", "destroyer", "deathstar"]
+title_array = ["uber", "apollo", "magma", "thadius", "froth"]
+target_array = ["mars", "venus", "the sun"]
 
-
-10.times do 
+10.times do
   title = title_array.sample
   vehicle = vehicle_array.sample
-  Mission.create(title: title, vehicle_name: vehicle)
+  launch_date = Time.now
+  target = target_array.sample
+  Mission.create(title: title, vehicle_name: vehicle, launch_date: launch_date, target: target)
 end
 
 
