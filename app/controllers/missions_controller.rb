@@ -1,5 +1,6 @@
 class MissionsController < ApplicationController
   def index
+    @missions = Mission.all
   end
 
   def new
@@ -8,24 +9,27 @@ class MissionsController < ApplicationController
 
   def create
     @mission = Mission.create(params[:mission])
-    # Ethan
+    redirect_to root_path
   end
 
   def show
+    @mission = Mission.find(params[:id])
   end
 
   def destroy
     Mission.delete(params[:id])
-    redirect_to '/'
-    # Brendan
+    redirect_to root_path
   end
 
   def update
-    # Matt
+    @mission = Mission.find(params[:id])
+    @mission.update_attributes(params[:mission])
+
+    redirect_to root_path
   end
 
   def edit
-    # Matt
+    @mission = Mission.find(params[:id])
   end
 
  end
