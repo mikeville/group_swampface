@@ -3,7 +3,11 @@ development:
   encoding: unicode
   database: nasa_missions_development
   pool: 5
+<<<<<<< HEAD
   username: ethandeveloper
+=======
+  username: brendan
+>>>>>>> 1eb1e8ec60c67e72fc080f354cb21dfed70cb554
   password:
 
 test:
@@ -11,7 +15,11 @@ test:
   encoding: unicode
   database: nasa_missions_test
   pool: 5
+<<<<<<< HEAD
   username: ethandeveloper
+=======
+  username: brendan
+>>>>>>> 1eb1e8ec60c67e72fc080f354cb21dfed70cb554
   password:
 
 production:
@@ -19,5 +27,9 @@ production:
   encoding: unicode
   database: nasa_missions_production
   pool: 5
+<<<<<<< HEAD
   username: ethandeveloper
+=======
+  username: brendan
+>>>>>>> 1eb1e8ec60c67e72fc080f354cb21dfed70cb554
   password:
